@@ -1,0 +1,1 @@
+where ejs (html) files will be stored

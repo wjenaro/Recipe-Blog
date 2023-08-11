@@ -1,21 +1,26 @@
 //add dependancies
-import express from "express";
-import expressLayouts from "express-ejs-layouts";
+const express =require("express");
+const expressEjsLayouts =require( "express-ejs-layouts");
+//require('dotenv/config')
 
 //initialise
 const app=express();
 //set port number
 const port=process.env.PORY || 3000;
 //for storing data
+//require('dotenv').config();
 require('dotenv').config();
+//middleware 
+app.use(express.urlencoded({extended:true}));
 //set static folder
 app.use(express.static('public'));
+app.use(expressEjsLayouts);
+app.set('layout', "./layouts/main");
 app.set('view engine', 'ejs');
-app.use(expressLayouts);
-//homepage
-app.get('/', (req, res)=>{
-    res.send("Hello World");
-});
+
+const routers= require('./server/routers/recipeRoutes.js');
+//const routes=require('./server/routers/recipeRoutes.js');
+app.use('/', routers);
 
 //listen to the port
 app.listen(port, ()=>{
