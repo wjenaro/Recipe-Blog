@@ -1,3 +1,97 @@
+/*
+Nav color
+*/
+.custom-yellowish-bg {
+  background-color:#ffc107; /* This is the hexadecimal color code for a shade of yellow */
+}
+.catchy-text {
+  color:#6599FF; /* Yellow color (#ffc107) */
+  font-weight: bold; /* Make the text bold */
+  font-size: xx-large;
+  font-style: italic; /* Make the text italic */
+}
+
+.custom-p {
+  font-size: 1em; /* Make the text larger */
+  transition: text-shadow 0.3s; /* Add a smooth transition effect for the text shadow */
+}
+
+.custom-p:hover {
+  text-shadow: 0 0 10px black; /* Add a shadow to create a glowing effect on hover */
+}
+.nav-item a {
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Add smooth transitions for color and text-shadow changes */
+  font-weight: bold; /* Make the text bold */
+}
+
+.nav-item a:hover {
+  color: #6599FF; /* Change color on hover to 6599FF */
+  text-shadow: 0 0 10px #6599FF; /* Add a glow effect on hover */
+}
+/*
+button styling
+*/
+.custom-button {
+  background-color: #6599FF; /* Default background color */
+  color: white; /* Text color */
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition for background color changes */
+}
+
+.custom-button:hover {
+  background-color: #FFDE00; /* Change background color on hover */
+  padding-right: 30px; /* Add padding to make space for the arrow icon */
+}
+
+.custom-button:hover i.fa-caret-square-o-right {
+  display: inline-block; /* Show the arrow icon on hover */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+/*
+*/
+/* styles.css */
+
+/* Custom CSS for the button */
+.custom-button-2 {
+  background-color: #6599FF;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button-2:hover {
+  display: block;
+  background-color: #FFDE00;
+}
+
+/* Icon style */
+.custom-button-2 i.fa-code {
+  display: none;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/* Adjust the arrow icon position and styling */
+.custom-button i.fa-caret-square-o-right {
+  display: none; /* Hide the arrow icon by default */
+ 
+}
+/*
+search button 
+*/
+.form-control {
+  transition: width 0.3s ease-in-out; /* Add a smooth transition for width changes */
+  width: 200px; /* Initial width of the search bar */
+}
+
+.form-control:hover,
+.form-control:focus {
+  width: 300px; /* Enlarge the width of the search bar on hover and focus */
+}
+
 .blob-image {
     width: 400px;
     height: 300px;
@@ -9,7 +103,7 @@
 /* Add glow effect on hover */
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.25);
+  transform: scale(1.15);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 

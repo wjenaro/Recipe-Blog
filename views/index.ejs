@@ -1,5 +1,6 @@
-<div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+<div class="container-fluid col-xxl-8 px-4 py-0" style="background-color: #097054;">
+  <div class="container"  >
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="/img/index-img.jpeg" class="blob-image d-block mx-lg-auto img-fluid" alt="rice" loading="lazy">
     <!-- Define the SVG clip path -->
@@ -12,18 +13,19 @@
   </svg>  
     </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">YOU CAN GET PURE FOOD HERE</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at tempus arcu. In tempus urna at odio cursus accumsan. Sed eu sodales dolor, et tristique enim. Aenean auctor scelerisque elit vitae convallis.</p>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="color: #FF9900;">YOU CAN GET PURE FOOD HERE</h1>
+        <p class="lead" style="color: #FF9900;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at tempus arcu. In tempus urna at odio cursus accumsan. Sed eu sodales dolor, et tristique enim. Aenean auctor scelerisque elit vitae convallis.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">See Blog</button>
+          <button type="button" class="btn custom-button btn-lg px-4 me-md-2">Contact <i class="fa fa-caret-square-o-right" style="font-size:16px"></i></i></button>
+          <button type="button" class="btn custom-button-2 btn-lg px-4">Explore <i class="fa fa-code" style="font-size:16px"></i></button>
         </div>
       </div>
     </div>
+    </div>
   </div>
   <!--Categories ----->
-  <div class="container col-xxl-8 px-4 py-5">
-    <h1 class="text-center mt-5">Recipe Categories</h1>
+  <div class="container col-xxl-8 px-4 py-2">
+    <h1 class="text-center mt-2">Recipe Categories</h1>
     <div class="row mt-4">
       <% if (locals.categories) { %>
         <% categories.forEach(function(item) { %>
@@ -44,11 +46,11 @@
   </div>
   <!--Categories -->
   <!-- start home blog body-->
-  <div class="container col-xxl-8 px-4 py-5">
+  <div class="container col-xxl-8 px-4 py-2">
   <div class="row g-5">
     <div class="col-md-8">
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
+        From the Firehose <i class="fa-solid fa-arrow-right" style="color: #273153;"></i>
       </h3>
 
       <article class="blog-post">
