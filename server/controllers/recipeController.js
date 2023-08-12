@@ -6,61 +6,17 @@ const Category = require('../models/Category');
  * homepage
  */
 exports.homepage=async(req, res)=>{
-    res.render('index');
+try {
+
+   const categories = await Category.find({}).limit(6);
+   
+
+    res.render('index', { categories} );
+   
+} catch (error) {
+    res.status(500).send({message: error.message || "Error Occured" }); 
 }
 
-async function insertDymmyCategoryData(){
-     try {
-        await Category.insertMany([
-            {
-                "name": "Italian",
-                "description": "Italian food is a cuisine that originated in Italy and is characterized by its use of fresh ingredients, pasta, and sauces",
-                "image": "italian-food.jpg"
-                },
-                {
-                "name": "Chinese",
-                "description": "Chinese food is a cuisine that originated in China and is characterized by its use of rice, noodles, and stir-fries",
-                "image": "chinese-food.jpg"
-                },
-                {
-                "name": "Mexican",
-                "description": "Mexican food is a cuisine that originated in Mexico and is characterized by its use of corn, beans, and chili peppers",
-                "image": "mexican-food.jpg"
-                },
-                {
-                "name": "Japanese",
-                "description": "Japanese food is a cuisine that originated in Japan and is characterized by its use of seafood, rice, and vegetables",
-                "image": "japanese-food.jpg"
-                },
-                {
-                "name": "Indian",
-                "description": "Indian food is a cuisine that originated in India and is characterized by its use of spices, rice, and lentils",
-                "image": "indian-food.jpg"
-                },
-                {
-                "name": "French",
-                "description": "French food is a cuisine that originated in France and is characterized by its use of butter, cream, and wine",
-                "image": "french-food.jpg"
-                },
-                {
-                "name": "Greek",
-                "description": "Greek food is a cuisine that originated in Greece and is characterized by its use of olive oil, seafood, and vegetables",
-                "image": "greek-food.jpg"
-                },
-                {
-                "name": "Spanish",
-                "description": "Spanish food is a cuisine that originated in Spain and is characterized by its use of ham, chorizo, and saffron",
-                "image": "spanish-food.jpg"
-                },
-                {
-                    "name": "Thai",
-                    "description": "Thai food is a Southeast Asian cuisine that is known for its bold flavors and fresh ingredients", 
-                   "image": "thai-food.jpg"
-                  },
-        ]);
-      } catch (error) {
-    console.log('err', + error)
-      }
-     }
-    
-insertDymmyCategoryData();
+}
+
+
