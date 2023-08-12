@@ -3,3 +3,44 @@
     height: 300px;
     clip-path: url(#blob-shape);
   }
+  /*
+  categories styling 
+  */
+/* Add glow effect on hover */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.25);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Style the "Read More" button */
+.card-button {
+  display: none;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ffc107; /* Yellowish background color */
+  color: white;
+  text-decoration: none; /* Remove underline */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.card-button:hover {
+  background-color: #ffca3a; /* Lighten the color on hover */
+}
+
+.card:hover .card-button {
+  display: block;
+}
+
+.card-title{
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
+  font-size: 100%; /* Set font size to a percentage for scalability */
+}
+.card:hover .card-title {
+  display: none;
+}
