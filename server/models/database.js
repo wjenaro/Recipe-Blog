@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const url="mongodb://0.0.0.0:27017/recipeDB"
 // mongoose.connect('mongodb://0.0.0.0:27017/recipeDB', { useNewUrlParser: true, useUnifiedTopology: true });
 async function connectDB(){
     try {
