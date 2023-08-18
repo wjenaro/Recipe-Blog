@@ -1,6 +1,7 @@
-const express = require('express');
+const express= require('express');
 const router =express.Router();
-const recipeController=require('../controllers/recipeController');
+const recipeController = require('../controllers/recipeController');
+
 //app routers
 router.get('/', recipeController.homepage);
 

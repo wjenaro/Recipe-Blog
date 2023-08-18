@@ -1,22 +1,16 @@
-require('../models/database');
-const Category = require('../models/Category');
-//const Recipe = require('../models/Recipe');
 /**
  * GET/
  * homepage
+ * Renders the index view for the homepage
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
  */
-exports.homepage=async(req, res)=>{
-try {
-
-   const categories = await Category.find({}).limit(6);
-   
-
-    res.render('index', { categories} );
-   
-} catch (error) {
-    res.status(500).send({message: error.message || "Error Occured" }); 
-}
-
-}
+exports.homepage = async (req, res) => {
+  try {
+    res.render('index');
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 

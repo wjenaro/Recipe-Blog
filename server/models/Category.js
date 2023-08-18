@@ -1,4 +1,4 @@
-const mongoose= require("mongoose");
+/* const mongoose= require("mongoose");
 //create a scheme
 
 const categorySchema=new mongoose.Schema({
@@ -18,4 +18,4 @@ const categorySchema=new mongoose.Schema({
 });
 
 //export
-module.exports=mongoose.model('Category', categorySchema);
+module.exports=mongoose.model('Category', categorySchema); */
