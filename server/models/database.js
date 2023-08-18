@@ -1,25 +1,32 @@
 const mongoose = require('mongoose');
-const url="mongodb://0.0.0.0:27017/recipeDB"
-// mongoose.connect('mongodb://0.0.0.0:27017/recipeDB', { useNewUrlParser: true, useUnifiedTopology: true });
-async function connectDB(){
-    try {
-        mongoose.connect("mongodb+srv://coder:SAZdh3ro0GLuRvfq@cluster0.9qaxudy.mongodb.net/?retryWrites=true&w=majority");
-        console.log("Database connected ---")
-    } catch (error) {
-        console.log("failed to connect");
-        
-    }
+const url = "mongodb://0.0.0.0:27017/recipeDB";
 
+// Define the MongoDB connection options (optional)
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
+
+// Function to connect to the database
+async function connectDB() {
+  try {
+    await mongoose.connect(url, options);
+    console.log("Database connected");
+  } catch (error) {
+    console.error("Failed to connect to the database:", error);
+  }
 }
 
+connectDB();
 
-
+// If you want to define models, you can do it here
 
 // const db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function(){
-//   console.log('Connected')
+// db.once('open', function() {
+//   console.log('Connected to MongoDB');
 // });
 
-// // Models
-//require('./Category');
+// If you have models defined in separate files, you can require them here
+// models
+require('./Category');
